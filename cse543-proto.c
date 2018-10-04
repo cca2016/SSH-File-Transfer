@@ -171,7 +171,6 @@ int send_message( int sock, ProtoMessageHdr *hdr, char *block )
 
 ***********************************************************************/
 
-/*** YOUR CODE ***/
 int encrypt_message( unsigned char *plaintext, unsigned int plaintext_len, unsigned char *key, 
 		     unsigned char *buffer, unsigned int *len )
 {
@@ -211,7 +210,6 @@ int encrypt_message( unsigned char *plaintext, unsigned int plaintext_len, unsig
 
 ***********************************************************************/
 
-/*** YOUR CODE ***/ 
 int decrypt_message( unsigned char *buffer, unsigned int len, unsigned char *key, 
 		     unsigned char *plaintext, unsigned int *plaintext_len )
 {
@@ -295,7 +293,6 @@ int extract_public_key( char *buffer, unsigned int size, EVP_PKEY **pubkey )
 
 ***********************************************************************/
 
-/*** YOUR CODE ***/
 int generate_pseudorandom_bytes( unsigned char *buffer, unsigned int size)
 {
    /* printf("before fake\n");  */
@@ -323,7 +320,6 @@ int generate_pseudorandom_bytes( unsigned char *buffer, unsigned int size)
 
 ***********************************************************************/
 
-/*** YOUR CODE ***/
 int seal_symmetric_key( unsigned char *key, unsigned int keylen, EVP_PKEY *pubkey, char *buffer )
 {
 	unsigned int len = 0;
@@ -357,7 +353,6 @@ int seal_symmetric_key( unsigned char *key, unsigned int keylen, EVP_PKEY *pubke
 
 ***********************************************************************/
 
-/*** YOUR CODE ***/
 int unseal_symmetric_key( char *buffer, unsigned int len, EVP_PKEY *privkey, unsigned char **key )
 {
          
@@ -399,7 +394,6 @@ int unseal_symmetric_key( char *buffer, unsigned int len, EVP_PKEY *privkey, uns
 
 ***********************************************************************/
 
-/*** YOUR CODE ***/
 int client_authenticate( int sock, unsigned char **session_key )
 {
   ProtoMessageHdr hdr;
@@ -468,7 +462,6 @@ int client_authenticate( int sock, unsigned char **session_key )
 
 ***********************************************************************/
 
-/*** YOUR CODE ***/ 
 int transfer_file( struct rm_cmd *r, char *fname, int sock, 
 		   unsigned char *key )
 {
@@ -519,7 +512,6 @@ int transfer_file( struct rm_cmd *r, char *fname, int sock,
 #endif
 
 			/* Encrypt and send */
-			/*** YOUR CODE - here ***/
 			printf("Sending file to server!\n");
 			unsigned char *buffer_send=(unsigned char *)malloc(MAX_BLOCK_SIZE);
 			memset(buffer_send,0,MAX_BLOCK_SIZE);
