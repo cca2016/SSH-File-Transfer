@@ -1,5 +1,5 @@
 # SSH-File-Transfer
-A client-server system that provides secure file transfer
+CSE 543 Course Project: A client-server system that provides secure file transfer
 
 ```
 makefile
